@@ -1,0 +1,6 @@
+the app.html in the ./app dir is the main html code that runs when we load the application
+app.ts is the part where the app.component.ts is being mapped to
+
+the class's field entered in app.ts can be used by {{}} in app.html
+
+file structure of the angular project:
