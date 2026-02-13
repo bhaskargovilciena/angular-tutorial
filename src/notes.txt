@@ -4,3 +4,34 @@ app.ts is the part where the app.component.ts is being mapped to
 the class's field entered in app.ts can be used by {{}} in app.html
 
 file structure of the angular project:
+1. entire project's config is stored in tsconfig.json. even build config is stored here
+2. the config of the src dir is stored in tsconfig.app.json. the config during dev env is stored here
+3. config of test cases written to test is stored in tsconfig.spec.json.
+4. angular.json = project's config that which file be loaded first, then which html will be loaded first, output path is also mentioned here, assets are written here, config of project, app, TS, specs like production's max size etc are written here
+5. package-lock.json = (auto created) stores exact versions of various dependencies
+6. package.json = stores the basic version that which versions are allowed to run the application
+7. .editorconfig = code formatting options, editor configs are written here like font style etc
+8. .angular = used for caching
+9. node_modules = all the packages, lib, dependencies are stored here
+10. src = application's code is written here
+11. index.html = first html file that is loaded (HTML's entry point)
+12. main.ts = first TS file that runs (TS's entry point)
+13. public = static images / assets are placed here that are publicly accessed
+
+INTERPOLATION
+the technique of taking data from TS file and putting in HTML file is called interpolation. using "{{}}" in HTML to process a variable in TS.
+we can also write some direct code of TS into the {{}}
+
+benefits of interpolation:
+1. "DISPLAYING DATA FROM TS TO HTML FILE"
+2. "EXECUTE JS CODE IN HTML FILE"
+
+we can write some math expressions to inside {{}} and it will be processed and the ans will be shown in the HTML file.
+variables written in app.ts can only be used in app.html
+in app.ts we mention template url which tells which html file can be interpolated with TS file
+
+limitations in interpolation:
+1. new variable can't be assigneed in HTML file
+2. increment and decrement ops can't be used
+3. for,while can be used in HTML file
+
