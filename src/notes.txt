@@ -35,3 +35,13 @@ limitations in interpolation:
 2. increment and decrement ops can't be used
 3. for,while can be used in HTML file
 
+ANGULAR CLI
+used to run, test, debug angular application
+to check whether angular cli is installed: ng version
+to create new project: ng new "app-name"
+to create component using angular cli: ng generate component "component-name"
+to create pipe: ng generate pipe "pipe-name"
+all the components / pipes are created in the ./src/app dir
+to install external packages: ng add "dependency-name"
+to get all the commands: ng help
+to build application: ng build
