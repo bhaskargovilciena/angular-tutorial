@@ -47,7 +47,7 @@ to get all the commands: ng help
 to build application: ng build
 
 COMPONENTS
-they are the small parts of an application that can be reused again in some other project
+they are the small parts of an application that can be reused again in some other project.
 4 files are generated when a component is created:
 1. .html = used for placing
 2. .css = used for styling
@@ -57,3 +57,7 @@ they are the small parts of an application that can be reused again in some othe
 to place a component inside another
 1. in the .ts of the parent component import the component in the import array
 2. in .ts file of the component, we have a @Component annotation and inside that we have the selector which is the HTML tag name to be used in the HTML file of the parent component.
+
+NOTE:
+we can create a function and call it using a button and using the (click) inside the button
+function has to be declared in the .ts file of the component and then the functions can be called from the HTML file
