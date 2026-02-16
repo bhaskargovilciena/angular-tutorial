@@ -61,3 +61,12 @@ to place a component inside another
 NOTE:
 we can create a function and call it using a button and using the (click) inside the button
 function has to be declared in the .ts file of the component and then the functions can be called from the HTML file
+
+DIRECTIVES
+they add more power to DOM elements. its a class that adds additional behaviour to some elements in the application.
+directives = ngIf, ngFor, ngStyle etc
+
+3 types of directives = 
+1. component directives: most common type of directives. used in component template file. provide the skeleton of the component
+2. structural directives: used to manipulate a component like creating, deleting, changing a component etc
+3. attribute directives: used to change the feature of the component

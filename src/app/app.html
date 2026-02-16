@@ -25,6 +25,58 @@
 
 <app-login></app-login> -->
 
+@if (state) {
+  <div>Heading tag to be shown state = true</div>
+}
+
+<ol>
+  @for (item of list; track $index) {
+    <li>item</li>
+  }
+</ol>
+
+<ol>
+  @for (item of studentsData; track item.name) {
+    <li>{{item.name}}, {{item.dob}}, {{item.age}} </li>
+  }
+</ol>
+
+@switch (block) {
+  @case (0) {
+    <h1>Block 0</h1>
+  }
+  @case (1) {
+    <h1>Block 1</h1>
+  }
+  @case (2) {
+    <h1>Block 2</h1>
+  }
+  @default {
+    <h1>Block incorrect</h1>
+  }
+}
+
+<button (click)="updateBlock()">Update Block</button>
+<br>
+<button style="margin-top: 10px;" (click)="updateColor('red')">Red</button>
+<button (click)="updateColor('pink')">Pink</button>
+<button (click)="updateColor('orange')">Orange</button>
+
+@switch (color) {
+  @case ('red') {
+    <h1 style="background-color: red;">Red color</h1>
+  }
+  @case ('orange') {
+    <h1 style="background-color: orange;"> Orange color</h1>
+  }
+  @case ('pink') {
+    <h1 style="background-color: pink;"> Pink color</h1>
+  }
+  @default {
+    <h1>No color matched</h1>
+  }
+}
+
 <h1 style="text-align: center;">Counter App</h1>
 <div>
   <h2 class="counter">{{counter}}</h2>

@@ -22,4 +22,30 @@ export class App {
   handleResetClick() {
     this.counter=0;
   }
+  state = true;
+  list = [1, 2, 3, 4];
+  
+  studentsData = [
+    {
+      name:"bhaskar",
+      age: "20",
+      dob: "14 dec 2004"
+    },
+    {
+      name:"ryansh",
+      age: "20",
+      dob: "25 july 2004"
+    }
+  ]
+
+  block = 4;
+  updateBlock() {
+    this.block++;
+    this.block %= 4;
+  }
+
+  color = "na"
+  updateColor(color:string) {
+    this.color = color;
+  }
 }
