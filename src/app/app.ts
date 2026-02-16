@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
+import { CommonModule } from '@angular/common';
+import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [CommonModule, TrimTextPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

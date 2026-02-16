@@ -25,6 +25,8 @@
 
 <app-login></app-login> -->
 
+
+<!-- directives demo -->
 @if (state) {
   <div>Heading tag to be shown state = true</div>
 }
@@ -77,6 +79,20 @@
   }
 }
 
+<!-- pipes demonstration -->
+<h1>{{title | uppercase}}</h1>
+<h2>{{counter | currency:'INR'}}</h2> 
+<!-- <h1>{{date | date}}</h1> -->
+ <!-- <h1>{{date | date:'mm'}}</h1> -->
+<!-- parameter of the pipe not to be passed using "|" -->
+
+<!-- custom pipe -->
+<h1>{{title | trimText}}</h1>
+<h1>{{title | trimText:5}}</h1> <!--passing an argument in the custom pipe-->
+
+<h1>{{title | trimText:7 | uppercase}}</h1> <!--trim text needs to return string coz uppercase pipe takes in string only-->
+
+<!-- sample counter app -->
 <h1 style="text-align: center;">Counter App</h1>
 <div>
   <h2 class="counter">{{counter}}</h2>

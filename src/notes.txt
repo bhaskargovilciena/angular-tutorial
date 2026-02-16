@@ -70,3 +70,15 @@ directives = ngIf, ngFor, ngStyle etc
 1. component directives: most common type of directives. used in component template file. provide the skeleton of the component
 2. structural directives: used to manipulate a component like creating, deleting, changing a component etc
 3. attribute directives: used to change the feature of the component
+
+PIPES
+they are some functions that help format the data when displaying on the HTML page. to use pipes we need to import CommonModule in the imports array of the component.ts file.
+some functions performed by pipes are:
+1. uppercase: convert everything in the variable to uppercase
+2. lowercase: convert everything to lowercase
+3. titlecase: "             "     " titlecase
+
+CUSTOM PIPES   
+custom pipes are the pipes that a programmer creates. can be created using ng generate pipe <pipe-name> command.
+to use the pipe, we need to import the pipe in the imports array of the component and then use name provided in the <pipe-name>.ts file.
+write the pipe's logic inside the function in TS file and take in the value / arguments as u like
