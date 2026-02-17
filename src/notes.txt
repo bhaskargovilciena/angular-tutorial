@@ -104,3 +104,8 @@ the advantage of using a service is that this is where the business logic is bei
 
 the demo service has been created in servics package. one thing to note is that providedIn = root helps to tell that this service can be used by any component in the application
 
+ROUTING
+routing is the method of navigating to diff parts of an application. usually there is a reload of the entire page when the user hits a diff route, but angular is single page application meaning that only one time the load occurs and the client has all the files for all the endpoints. after server returns the response, client side routing takes over.
+routes are the components that need to be loaded when the user hits the specific component.
+
+routes are defined in the app.routes.ts file.
