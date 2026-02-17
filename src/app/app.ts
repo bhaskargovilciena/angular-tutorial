@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
 import { HighlightText } from './directives/highlight-text';
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TrimTextPipe, HighlightText],
+  imports: [CommonModule, TrimTextPipe, HighlightText, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

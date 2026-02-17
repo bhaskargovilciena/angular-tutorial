@@ -98,3 +98,9 @@ in the directive annotation, we can also pass the property of host that is used 
 
 we can add a input property in the .ts file of the directive and pass the input from HTML file. then we can adjust the behaviour according to the input
 
+DEPENDENCY INJECTION
+a dependency is a service that performs a paticular function. we can create custom services and we can call a service from a component.
+the advantage of using a service is that this is where the business logic is being handled and where all the server calls are also executed.
+
+the demo service has been created in servics package. one thing to note is that providedIn = root helps to tell that this service can be used by any component in the application
+
