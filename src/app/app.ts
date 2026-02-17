@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
+import { HighlightText } from './highlight-text';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TrimTextPipe],
+  imports: [CommonModule, TrimTextPipe, HighlightText],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -12,6 +13,7 @@ export class App {
   title = "Angular Tutorial";
   name = "Bhaskar Govil"
   hello = "hello"
+  color = ''
   counter = 0
   handleDecrementClick() {
     this.counter--;
@@ -43,8 +45,6 @@ export class App {
     this.block++;
     this.block %= 4;
   }
-
-  color = "na"
   updateColor(color:string) {
     this.color = color;
   }

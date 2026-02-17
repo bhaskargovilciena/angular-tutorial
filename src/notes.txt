@@ -82,3 +82,19 @@ CUSTOM PIPES
 custom pipes are the pipes that a programmer creates. can be created using ng generate pipe <pipe-name> command.
 to use the pipe, we need to import the pipe in the imports array of the component and then use name provided in the <pipe-name>.ts file.
 write the pipe's logic inside the function in TS file and take in the value / arguments as u like
+
+ATTRIBUTE DIRECTIVES
+command: "ng generate directive highlight-text" => we can create a custom directive
+2 files are created with their respective .ts and .spec.ts files for logic handling and testing respectively.
+
+by default in a directive, there is a selector which is used to inject the directive in the HTML file.
+we take the reference of the element using the directive by importing ElementRef , inject from @angular/core.
+in the class, we use the inject function and inside that pass the ElementRef and take the instance of it to call the element tag.
+to modify the CSS of prop this.element.nativeElement.style.<property-name>
+
+in the directive annotation, we can also pass the property of host that is used to pass the various events for which the directive shall be invoked.
+2 events:
+(mouseenter) and (mousleave) their names suggest the property of the event
+
+we can add a input property in the .ts file of the directive and pass the input from HTML file. then we can adjust the behaviour according to the input
+
