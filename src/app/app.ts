@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
-import { HighlightText } from './highlight-text';
+import { HighlightText } from './directives/highlight-text';
 
 @Component({
   selector: 'app-root',
