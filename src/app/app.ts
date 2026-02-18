@@ -4,11 +4,11 @@ import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
 import { HighlightText } from './directives/highlight-text';
 import { Navbar } from './components/navbar/navbar';
 import { Login } from './components/login/login';
-import {RouterOutlet } from "@angular/router";
+import { RouterOutlet, RouterLinkWithHref, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TrimTextPipe, HighlightText, RouterOutlet],
+  imports: [CommonModule, TrimTextPipe, HighlightText, RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -20,7 +20,7 @@ export class App {
   amount = 1000
   state = true;
   list = [1, 2, 3, 4];
-  
+  id = 100
   studentsData = [
     {
       name:"bhaskar",

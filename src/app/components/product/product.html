@@ -1,3 +1,11 @@
 <p>product works!</p>
 <p>product id: </p>
-<router-outlet></router-outlet>
+<!-- adding nav where by clicking a text / button on the application, a route is triggered. we use routerLink where the endpoint is added at the end of the URL like a child path -->
+<nav>
+    <ul>
+        <li><a routerLink="info"> Product Info </a></li>
+        <li><a routerLink="reviews"> Product Reviews </a></li>
+    </ul>
+</nav>
+
+<router-outlet [routerOutletData]="{layout: 'sidebar'}"></router-outlet>

@@ -135,3 +135,16 @@ on '/product' Product component is displayed
 on '/product/info' ProductInfo component is displayed
 on '/product/reviews' ProductReviews component is displayed
 make sure to include router-outlet HTML tag in the parent component's HTML page
+
+we can add routerLink in the <a /> tag so that the link is added as a child to the path and the URL is called accordingly
+
+Secondary Routes wherein we add a name to the router-outlet so that the specific router-outlet can be called from routes.ts.
+using this feature we can call to load a specific router-outlet out of various in the parent component.
+
+we can pass contextual data to the router components by passing it as an input as "routerOutletData" and then injecting this as a dependency in the router-outlet component. we can inject it and pass as a signal to use the data as we like in the component. using this we can pass some data into the routerOutlet
+
+Navigating to another route
+1. using routerLink and passing the value as array or string. when we want to pass some dynamic data then we need to use array else we can use strings
+2. .navigate(): "using this.router.navigate(<string / array>)" string for literals and array to pass dynamic data.
+we can query params by writing the params in JSON format and passing along with array as a JSON
+3. .navigateWithUrl(): pass the complete endpoint as a string in the function

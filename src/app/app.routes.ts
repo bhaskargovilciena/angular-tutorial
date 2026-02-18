@@ -12,11 +12,6 @@ export const routes: Routes = [
   // HomePage and LoginPage are both directly referenced in this config,
   // so their code is eagerly included in the same JavaScript bundle as this file.
   {
-    path: '',
-    component: App,
-    title: 'Home Page'
-  },
-  {
     path: 'login', // static route
     component: Login,
     title: 'Login Page',
@@ -49,11 +44,11 @@ export const routes: Routes = [
     children: [ // array of route object
       {
         path: 'info',
-        component: ProductInfo
+        component: ProductInfo,
       },
       {
         path: 'reviews',
-        component: ProductReviews
+        component: ProductReviews,
       }
     ]
   }
