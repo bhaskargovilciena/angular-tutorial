@@ -2,11 +2,13 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
 import { HighlightText } from './directives/highlight-text';
-import { Navbar } from './navbar/navbar';
+import { Navbar } from './components/navbar/navbar';
+import { Login } from './components/login/login';
+import {RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TrimTextPipe, HighlightText, Navbar],
+  imports: [CommonModule, TrimTextPipe, HighlightText, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -15,16 +17,7 @@ export class App {
   name = "Bhaskar Govil"
   hello = "hello"
   color = ''
-  counter = 0
-  handleDecrementClick() {
-    this.counter--;
-  }
-  handleIncrementClick() {
-    this.counter++;
-  }
-  handleResetClick() {
-    this.counter=0;
-  }
+  amount = 1000
   state = true;
   list = [1, 2, 3, 4];
   

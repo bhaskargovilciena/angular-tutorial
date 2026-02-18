@@ -27,7 +27,10 @@
 
 
 <!-- directives demo -->
-@if (state) {
+
+<router-outlet></router-outlet>
+
+<!-- @if (state) {
   <div>Heading tag to be shown state = true</div>
 }
 
@@ -78,10 +81,10 @@
     <h1>No color matched</h1>
   }
 }
-
+-->
 <!-- pipes demonstration -->
 <h1>{{title | uppercase}}</h1>
-<h2>{{counter | currency:'INR'}}</h2> 
+<h2>{{amount | currency:'INR'}}</h2> 
 <!-- <h1>{{date | date}}</h1> -->
  <!-- <h1>{{date | date:'mm'}}</h1> -->
 <!-- parameter of the pipe not to be passed using "|" -->
@@ -92,17 +95,6 @@
 
 <h1>{{title | trimText:7 | uppercase}}</h1> <!--trim text needs to return string coz uppercase pipe takes in string only-->
 
-<!-- sample counter app -->
-<h1 style="text-align: center;">Counter App</h1>
-<div>
-  <h2 class="counter">{{counter}}</h2>
-  <div style="text-align: center;">
-    <button class="btn bg-red" (click)="handleDecrementClick()">Decrement</button>
-    <button class="btn bg-yellow" (click)="handleResetClick()">Reset</button>
-    <button class="btn bg-green" (click)="handleIncrementClick()">Increment</button>
-  </div>
-</div>
-
 <h1>My First Attribute Directive</h1>
 <h2>Pick a highlight color</h2>
 <div>
@@ -110,6 +102,4 @@
   <input type="radio" name="colors" (click)="color = 'yellow'" />Yellow
   <input type="radio" name="colors" (click)="color = 'cyan'" />Cyan
 </div>
-<h1 [appHighlightText]="color">Hightlight Me!</h1>
-
-<app-navbar></app-navbar>
+<h1 [appHighlightText]="color">Hightlight Me!</h1> 

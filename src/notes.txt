@@ -109,3 +109,29 @@ routing is the method of navigating to diff parts of an application. usually the
 routes are the components that need to be loaded when the user hits the specific component.
 
 routes are defined in the app.routes.ts file.
+
+there mainly 2 types of routes:
+1. static routes = one without query parameters
+2. dynamic routes = ones with query parameters
+
+route loading strategy:
+1. lazy loading: loaded when the user hits a specific endpoint
+2. eagerly loading: loaded when the user hits the main page and these components are automatically sent by server
+
+to use routers in the app.ts we import RouterOutlet in app.ts
+
+to use lazy loading we use loadComponent() and loadChildren() and return a promise with import and .then() to resolve that promise and return the component
+
+we can also use redirectTo to redirect a request to another route. note that loadComponent / loadChildren can't be used with redirect attribute
+
+to add title to a page, we can add a property of "title: 'Home Page'"
+
+we can also inject certain dependencies in specific routes so as to let certain routes use some services / dependencies.
+there is property of providers which is used to pass a service along with the props required for that service.
+
+nested routes:
+routes can be added as a children of components.
+on '/product' Product component is displayed
+on '/product/info' ProductInfo component is displayed
+on '/product/reviews' ProductReviews component is displayed
+make sure to include router-outlet HTML tag in the parent component's HTML page
