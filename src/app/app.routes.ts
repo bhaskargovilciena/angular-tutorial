@@ -20,6 +20,7 @@ export const routes: Routes = [
   {
     path:'navbar',
     redirectTo: '/login',
+    pathMatch: 'prefix', // can be set to full
     data: {
       analyticsId: '123' // passing some static data with the endpoint which can be used by the component.
     }

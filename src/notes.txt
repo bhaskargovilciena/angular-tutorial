@@ -157,3 +157,15 @@ this dependency has a lot of attributes:
 3. params: observable that contains the params passed in the request specific to it
 4. query params: the query parameters passed to query the database by the server
 
+Route redirecting with pathMatch:
+pathMatch property helps to tell which part of the route should match with the one mentiond and then where should all these be redirected
+
+1. pathMatch = prefix
+suppose i set redirect /news to /blog then:
+/news will redirect to /blog
+/news/:id will redirect to /blog/:id
+/news/item/:id will redirect to /blog/item/:id
+
+2. pathMatch = full
+suppose /dashboard will redirect to /abc
+then /dashboard/:id will also redirect to /abc only.
