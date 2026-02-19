@@ -228,3 +228,13 @@ we use the dependency of formField and bind it with the input tag to store the i
 
 Reading data from a field:
 note that every field in the form is a function, hence all the props must have "()" at the last. 
+
+UPDATING THE FORM:
+updating the entire form at once: 
+create a new form model and call the set method on the model with the new model. note that the fields must be exactly same else error will be thrown.
+
+updating a single field in form: can be done directly by calling the property from the form object and then calling the set() / update() method on it.
+
+demo of loading a from the API is shown by creating a user service.
+
+# add data binding
