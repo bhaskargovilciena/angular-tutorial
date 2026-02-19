@@ -169,3 +169,51 @@ suppose i set redirect /news to /blog then:
 2. pathMatch = full
 suppose /dashboard will redirect to /abc
 then /dashboard/:id will also redirect to /abc only.
+
+FORMS
+forms help to enable users to login, update profile and to group data together and perform other data entry tasks
+
+reactive forms: provide direct access to the form model object. hence, reusability, testability, scalability etc improve drastically.
+template driven forms: simple scenarios where the form is created using directives, is async.
+
+imp form foundation classes:
+1. form control: tracks the status of an individual form component.
+2. form collection: tracks the same for a collection of forms
+3. form array: tracks the same for a array of forms
+
+the main diff in implementation of reactive-forms and template-drive forms is that formControl instance needs to be created for reactive forms whereas not for template driven forms
+
+NOTE: A FORM MODEL IS A FORM CONTROL INSTANCE
+
+DATA FLOW IN REACTIVE FORMS:
+1. view to model (user makes changes on the form from client and they are synced to the model)
+a. the user changes the value let's say input tag of a form
+b. the form fires an input event.
+c. the ControlValueAccessor is listening for all types of events and when the input event is triggered then it fires an observable of valueChanges.
+d. this valueChanges observable tells all its subscribers that an "input" event has taken place and notifies all its subs. they accordingly change the value wherever needed
+
+2. model to view (a change in the application triggers the logic to make the same change on the form input)
+a. the method whichever is executed calls the .setValue() on the FormControl. 
+b. FormControl again calls the valueChanges observable which calls its subscribers and event is notified.
+c. the FormControl also tells ControlValueAccessor that a value has been change n the input field is also changed accordingly.
+
+DATA FLOW IN TEMPLATE-DRIVEN FORMS
+1. view to model:
+a. the user change the value and triggers an input event.
+b. this input event triggers the ControlValueAccessor to call the setValue method on the FormControl which calls the valueChanges observable which notifies its subscribers and the event propagates.
+c. the ControlValueAccessor also calls viewToModelUpdate() method and NgModel emits a NgModelChange event and it has 2 way binding with Component and hence, updates the value of the component.
+
+2. model to view
+a. the component updates the property value bound to NgModel directive. this property is changed by calling ngOnChanges.
+b. ngOnChanges queues the task change to set the value of the internal FormControl instance.
+c. this value is then updated of the component and triggers the changes in valueChange observable.
+d. all the subscribers of this observable are notified at once.
+
+MUTABILITY aspect:
+1. in reactive forms: the mutability aspect is very good as every time a change is made, a new data model is created and the unique fields which have changed are updated. this is much faster and we can track the changes using FormControl's observable.
+2. in template driven forms: the mutability aspect is less as there is 2 way binding between the component and the template. as the changes are made in component, so are they made in the template.
+
+FORM VALIDATION:
+reactive forms: we can define custom validators as functions that can validate a form by checking required fields must be filled, external API can be queried for exsiting username etc.
+
+FORM MODELS:
