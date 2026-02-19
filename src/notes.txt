@@ -148,3 +148,12 @@ Navigating to another route
 2. .navigate(): "using this.router.navigate(<string / array>)" string for literals and array to pass dynamic data.
 we can query params by writing the params in JSON format and passing along with array as a JSON
 3. .navigateWithUrl(): pass the complete endpoint as a string in the function
+
+Reading Route's state 
+we can access the route's information by injecting the ActivatedRoute dependency.
+this dependency has a lot of attributes:
+1. url: complete literal endpoint of the route
+2. data: it contains the data for the route
+3. params: observable that contains the params passed in the request specific to it
+4. query params: the query parameters passed to query the database by the server
+
