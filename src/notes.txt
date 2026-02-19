@@ -226,3 +226,5 @@ note that the form created is a field tree structure, meaning that i can access 
 
 we use the dependency of formField and bind it with the input tag to store the input directly in the form's field. note that the signal is the skeleton and all the values of the signal must be present to access. i can't create another attribute to the signal later on. also, to pass optional params we can create an interface mentioning the data types of the props and pass a type as null.
 
+Reading data from a field:
+note that every field in the form is a function, hence all the props must have "()" at the last. 
