@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custom-pipe/trim-text-pipe';
 import { HighlightText } from './directives/highlight-text';
 import { Navbar } from './components/navbar/navbar';
-import { Login } from './components/login/login';
+import { Login } from './forms/login/login';
 import { RouterOutlet, RouterLinkWithHref, RouterLink } from "@angular/router";
 
 @Component({

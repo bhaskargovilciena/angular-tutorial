@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
-import { Login } from './components/login/login';
+import { Login } from './forms/login/login';
 import { App } from './app';
 import { inject } from '@angular/core';
 import { CustomService } from './services/custom-service';

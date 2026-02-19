@@ -217,3 +217,4 @@ FORM VALIDATION:
 reactive forms: we can define custom validators as functions that can validate a form by checking required fields must be filled, external API can be queried for exsiting username etc.
 
 FORM MODELS:
+we can create a new form component using the signal method of the form. this method holds an object that returns the form's data structure.
