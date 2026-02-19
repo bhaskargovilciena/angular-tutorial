@@ -1,1 +1,7 @@
 <h1 style="background-color:burlywood;">login works!</h1>
+<input placeholder="Username" type="text" class="input-field" [formField]="loginForm.username" />
+<br>
+<input type="text" [formField]="loginForm.password" class="input-field" placeholder="Password"/>
+
+<h2>username: {{loginForm.username().value()}}</h2>
+<h2>password: {{loginForm.password().value()}}</h2>

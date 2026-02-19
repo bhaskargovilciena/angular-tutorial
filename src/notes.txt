@@ -218,3 +218,11 @@ reactive forms: we can define custom validators as functions that can validate a
 
 FORM MODELS:
 we can create a new form component using the signal method of the form. this method holds an object that returns the form's data structure.
+
+creating a form model:
+we use the form method and in the imports array add FormField. we then create a signal which stores the structure as to how should the form look like. then this is passed inside the form() as a argument and then actual form is created and its value can be stored in var.
+
+note that the form created is a field tree structure, meaning that i can access any value of the form using like "this.loginForm.username" and using {{}} in the HTML to display the same on the HTML page.
+
+we use the dependency of formField and bind it with the input tag to store the input directly in the form's field. note that the signal is the skeleton and all the values of the signal must be present to access. i can't create another attribute to the signal later on. also, to pass optional params we can create an interface mentioning the data types of the props and pass a type as null.
+
