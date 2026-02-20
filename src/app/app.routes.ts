@@ -10,6 +10,7 @@ import { ProductInfo } from './components/product-info/product-info';
 import { ProductReviews } from './components/product-reviews/product-reviews';
 import { FavoriteColor } from './forms/reactive-favorite-color/favorite-color';
 import { TemplateFavoriteColor } from './forms/template-favorite-color/template-favorite-color';
+import { HttpClientDemo } from './components/http-client-demo/http-client-demo';
 export const routes: Routes = [
   // HomePage and LoginPage are both directly referenced in this config,
   // so their code is eagerly included in the same JavaScript bundle as this file.
@@ -66,5 +67,9 @@ export const routes: Routes = [
   {
     path: 'template-driven-form',
     component: TemplateFavoriteColor
+  },
+  {
+    path: 'http-client-demo',
+    component: HttpClientDemo
   }
 ];
