@@ -237,4 +237,11 @@ updating a single field in form: can be done directly by calling the property fr
 
 demo of loading a from the API is shown by creating a user service.
 
-# add data binding
+Data binding between model state and form UI:
+user input -> model
+1. the formField directive detects the change.
+2. rallies the change to the FormControl to update the form control state and the model also gets updatd.
+
+model -> UI
+1. code calls the set() of the property.
+2. this changes the UI and the model state both together using data binding.
